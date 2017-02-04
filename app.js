@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var key = require('./keys.js')
 var app = express();
+
 app.use(express.static('public'))
 
 var connection = mysql.createConnection({
@@ -20,7 +21,7 @@ connection.connect(function(err) {
 
 app.get('/',function(req,res){
 	res.sendFile(path.join(__dirname, "public/html/view.html"));
-	//res.send('sup');
+
 
 });
 
