@@ -8,7 +8,7 @@
 
     $.get("/query/", login)
     .done(function(data) {
-      $('#welcome').html("welcome"+data[0].fname);
+      $('#welcome').html("welcome "+data[0].fname);
     });
   });
 
@@ -21,6 +21,6 @@
 
       $.get("/query2/", login)
       .done(function(data) {
-        $('#welcome').html("welcome"+data[0].fname);
+        $('#welcome').html("welcome "+data[0].fname);
       });
     });
