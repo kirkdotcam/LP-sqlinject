@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SQLInjection Sample by CamKirk</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 id="welcome">#TeamWhiteHat</h1>
+      <hr>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Add Characters</strong></h3>
+          </div>
+          <div class="panel-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+                <label for="ID">ID</label>
+                <input type="text" class="form-control" id="ID">
+              </div>
+
+              <div class="form-group">
+                <label for="pass">password</label>
+                <input type="text" class="form-control" id="pass">
+              </div>
+
+            </form>
+            <br>
+            <div>
+              <button type="submit" class="btn btn-primary btn-md" id="lookup">Who is this?</button>
+              <button type="submit" class="btn btn-primary btn-md" id="lookup2">Okay so let's use passwords!</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/main.js"></script>
+
+</body>
+</html>
