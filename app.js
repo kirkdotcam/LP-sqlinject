@@ -12,6 +12,7 @@ var connection = mysql.createConnection({
   user: "root",
   password: key.pw,
   database: "injection_db",
+  //This is the first red flag. Allowing a user to make multiple statments will allow them to place a semicolon at the end of any form field and inject a new query.
   multipleStatements: true
 });
 
@@ -29,6 +30,7 @@ app.get('/query/',function(req,res){
   var uid=req.query.ID;
   var pass=req.query.pass;
 
+  //below we create our query using a concatenated string. This is a BIG no-no.
   var query = 'SELECT * FROM `accounts` WHERE `id`='+ uid;
   console.log(query);
   connection.query(query, function(err, queryres) {
@@ -40,6 +42,7 @@ app.get('/query/',function(req,res){
 
 	});
 });
+
 
 app.get('/query2/',function(req,res){
   var uid=req.query.ID;

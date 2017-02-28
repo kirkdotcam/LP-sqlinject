@@ -1,3 +1,5 @@
+//This version of the app correctly uses the ? ?? method for performing queries, and does NOT allow multiple queries.
+
 var mysql = require('mysql');
 var express = require('express');
 var path = require('path');
