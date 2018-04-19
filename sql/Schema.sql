@@ -6,6 +6,7 @@ CREATE TABLE accounts (
 	, lname VARCHAR(30)
 	, password VARCHAR(20) NOT NULL
 	, account INTEGER(15) NOT NULL
+	, role VARCHAR(20) NULL
 	, PRIMARY KEY (id)
 
 );
