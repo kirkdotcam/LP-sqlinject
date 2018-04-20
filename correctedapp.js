@@ -3,7 +3,7 @@
 var mysql = require('mysql');
 var express = require('express');
 var path = require('path');
-var key = require('./keys.js')
+//var key = require('./keys.js')
 var app = express();
 app.use(express.static('public'))
 
@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: key.pw,
+  password: "",
   database: "injection_db",
   //multipleStatements: true
 });
@@ -30,7 +30,7 @@ app.get('/query/',function(req,res){
   var uid=req.query.ID;
   var pass=req.query.pass;
 
-  var query = 'SELECT * FROM `accounts` WHERE `id`= ?';
+  var query = 'SELECT * FROM `accounts` WHERE `fname`= ?';
   console.log(query);
   connection.query(query,uid, function(err, queryres) {
 		if (err) {throw err}
@@ -46,7 +46,7 @@ app.get('/query2/',function(req,res){
   var uid=req.query.ID;
   var pass=req.query.pass;
 
-  var query = 'SELECT * FROM `accounts` WHERE `id`= ? AND  `password`= ? ';
+  var query = 'SELECT * FROM `accounts` WHERE `fname`= ? AND  `password`= ? ';
 
   console.log(query);
   connection.query(query,[uid,pass], function(err, queryres) {
