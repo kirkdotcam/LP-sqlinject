@@ -4,6 +4,8 @@
 
 - [Escaping query values](https://github.com/mysqljs/mysql#escaping-query-values) in the NPM mysql package.
 
+- [Preapred statments in the mysql2 package](https://www.npmjs.com/package/mysql2#using-prepared-statements)
+
 - [hackthissite](https://www.hackthissite.org/)
 
 - There are plenty of penetration testing tools out there for SQL injections. A great one is known as [sqlmap](https://github.com/sqlmapproject/sqlmap), a python library that quickly scans and tests a lot of common injection vulnerabilities
@@ -66,3 +68,4 @@ Although these are relatively small hacks by comparison, you all can use your im
 * Read the comments in this code and listen to my lecture!
 * Both the mysql and sequelize modules have you covered. They do a lot to protect you from injections by default.
 * In other languages, make ABSOLUTELY CERTAIN that you escape characters in user input. You don't want you query to read semicolons, OR, or WHERE statements.
+* The technical term to protect against most injections is a [prepared statement](https://stackoverflow.com/questions/8263371/how-can-prepared-statements-protect-from-sql-injection-attacks)
